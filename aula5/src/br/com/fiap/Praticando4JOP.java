@@ -7,20 +7,16 @@ public class Praticando4JOP {
     //Calcular uma equação do segundo grau
     public static void main(String[] args) {
         double a, b, c, x1, x2, delta;
-        Scanner scan;
+        String auxiliar;
 
         try {
+            auxiliar = JOptionPane.showInputDialog("Digite o valor do a:");
+            a = Double.parseDouble(auxiliar);
+            auxiliar = JOptionPane.showInputDialog("Digite o valor do b:");
+            b = Double.parseDouble(auxiliar);
+            auxiliar = JOptionPane.showInputDialog("Digite o valor do c:");
+            c = Double.parseDouble(auxiliar);
 
-            scan = new Scanner(System.in);
-
-            System.out.println("Digite o valor do a:");
-            a = scan.nextDouble();
-
-            System.out.println("Digite o valor do b:");
-            b = scan.nextDouble();
-
-            System.out.println("Digite o valor do c:");
-            c = scan.nextDouble();
 
             delta = (b*b) - (4*a*c);
 
@@ -28,9 +24,11 @@ public class Praticando4JOP {
 
             x2 = (- b - Math.sqrt(delta)) / 2*a;
 
-            System.out.println("O delta é: " + delta);
-            System.out.println("O x1 é: " + x1);
-            System.out.println("O x2 é: " + x2);
+
+            JOptionPane.showMessageDialog(null, "O delta é: " + delta);
+            JOptionPane.showMessageDialog(null, "O x1 é: " + x1);
+            JOptionPane.showMessageDialog(null, "O x2 é: " + x2);
+
 
 
 
